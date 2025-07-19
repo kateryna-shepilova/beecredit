@@ -1,0 +1,181 @@
+@use "./variables" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot');
+  src:  url('../fonts/icomoon.eot') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down-right:before {
+  content: "\e900";
+}
+.icon-arrow-up-right:before {
+  content: "\e901";
+}
+.icon-burger:before {
+  content: "\e902";
+}
+.icon-call:before {
+  content: "\e903";
+}
+.icon-check:before {
+  content: "\e904";
+}
+.icon-check-circle:before {
+  content: "\e905";
+}
+.icon-chevron-down:before {
+  content: "\e906";
+}
+.icon-chevron-left:before {
+  content: "\e907";
+}
+.icon-chevron-right:before {
+  content: "\e908";
+}
+.icon-chevron-up:before {
+  content: "\e909";
+}
+.icon-close:before {
+  content: "\e90a";
+}
+.icon-file-alt:before {
+  content: "\e90b";
+}
+.icon-google:before {
+  content: "\e90c";
+}
+.icon-person:before {
+  content: "\e90d";
+}
+.icon-question:before {
+  content: "\e90e";
+}
+.icon-user-circle:before {
+  content: "\e90f";
+}
+
+@mixin heading1 {
+	font-size: 50px;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+
+	@media (min-width: $pc) {
+		font-size: 96px;
+	}
+}
+
+@mixin heading2 {
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1.5em;
+	text-transform: uppercase;
+
+	@media (min-width: $pc) {
+		font-size: 64px;
+	}
+}
+
+@mixin heading3 {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: normal;
+
+	@media (min-width: $pc) {
+		font-size: 28px;
+	}
+}
+
+@mixin heading4 {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: normal;
+
+	@media (min-width: $pc) {
+		font-size: 24px;
+	}
+}
+
+@mixin heading5 {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: normal;
+
+	@media (min-width: $pc) {
+		font-size: 20px;
+	}
+}
+
+@mixin text {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: normal;
+
+	@media (min-width: $pc) {
+		font-size: 16px;
+	}
+}
+
+h1 {
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+	@include heading1;
+}
+
+h2 {
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+	@include heading2;
+}
+
+h3 {
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+	@include heading3;
+}
+
+h4 {
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+	@include heading4;
+}
+
+h5 {
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+	@include text;
+}
+
+h6 {
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease-in-out;
+	@include text;
+}
+
+.title {
+	@include heading2;
+}

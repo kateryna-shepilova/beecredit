@@ -1,0 +1,15 @@
+@use "./variables" as *;
+@use "./colors" as *;
+@use "./mixins" as *;
+@use "./typography" as *;
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.subtitle {
+  @include text;
+  @include line;
+}

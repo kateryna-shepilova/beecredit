@@ -1,0 +1,45 @@
+@use './variables' as *;
+@use './colors' as *;
+@use './mixins' as *;
+@use './typography' as *;
+
+a {
+	color: var(--color-system-blue-100);
+}
+
+.link {
+	width: fit-content;
+	color: $black;
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+	@include text;
+	@include line;
+
+	@media (min-width: $pc) {
+		@include heading4;
+	}
+
+	&::after {
+		margin: 8px auto;
+		max-width: 100%;
+	}
+
+	&:hover {
+		color: $hover;
+
+		&::after {
+			background: $hover;
+		}
+	}
+
+	&:active,
+	&:focus {
+		color: $black;
+
+		&::after {
+			background: $brown;
+		}
+	}
+}
