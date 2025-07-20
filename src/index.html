@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./dist/css/style.css">
   <title>Holiday</title>
   <script src="./dist/js/main.min.js" defer></script>
+  <script src="./src/js/main.js" defer></script>
 </head>
 
 <body>
@@ -56,7 +57,87 @@
       </header>
       <main class="main" id="main">
         <div class="container">
-          <section class="faq-section">
+          <section class="hero">
+            <div class="hero__left-col">
+              <h1 class="hero__title">BeeCredit -
+                гроші там де ти!</h1>
+              <h2 class="hero__subtitle">Новий сервіс онлайн кредитування</h2>
+              <div class="hero-box">
+                <div class="hero-box__header">
+                  <h3 class="hero-box__title">Умови отримання кредиту:</h3>
+                  <a class="icon-chevron-right" href="#">Детальніше</a>
+                </div>
+                <div class="hero-box__content">
+                  <div class="card-hero">
+                    <div class="card-hero__number"></div>
+                    <div class="card-hero__text-holder">
+                      <p>Мати громадянство України</p>
+                    </div>
+                  </div>
+                  <div class="card-hero">
+                    <div class="card-hero__number"></div>
+                    <div class="card-hero__text-holder">
+                      <p>Мінімальний вік від 18 років</p>
+                    </div>
+                  </div>
+                  <div class="card-hero">
+                    <div class="card-hero__number"></div>
+                    <div class="card-hero__text-holder">
+                      <p>ІПН, паспорт, особистий телефон</p>
+                    </div>
+                  </div>
+                  <div class="card-hero">
+                    <div class="card-hero__number"></div>
+                    <div class="card-hero__text-holder">
+                      <p>Банківська карта видана будь-яким українським банком</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero__right-col">
+              <div class="hero__image-holder">
+                <picture>
+                  <source>
+                  <img src="img" width="" height="" alt="" loading="lazy">
+                </picture>
+              </div>
+              <div class="credit-box">
+                <h2 class="credit-box__title">Отримайте гроші прямо зараз</h2>
+                <div class="credit-form">
+                  <div class="credit-form__field">
+                    <label class="credit-form__label">Сума кредиту:</label>
+                    <div class="credit-form__range-wrapper">
+                      <input type="range" min="2000" max="20000" value="5000" class="credit-form__range"
+                        id="creditAmount">
+                      <div class="credit-form__range-labels">
+                        <span class="credit-form__range-min">2 000 грн</span>
+                        <span class="credit-form__range-max">20 000 грн</span>
+                      </div>
+                      <input type="text" value="5 000 грн" class="credit-form__amount" readonly>
+                    </div>
+                  </div>
+
+                  <div class="credit-form__field">
+                    <label class="credit-form__label">Термін:</label>
+                    <div class="credit-form__term"><strong>105 днів</strong></div>
+                  </div>
+
+                  <button class="credit-form__submit">
+                    Почати оформлення
+                    <span class="credit-form__submit-icon">✔</span>
+                  </button>
+                </div>
+                <a class="icon-question" href="#">Деталі кредиту</a>
+                <div class="credit-box__warning">
+                  <p>Даний блок не є кредитним калькулятором у розумінні Постанови НБУ від 05.10.2021 №100. Для
+                    ознайомлення з розрахунком кредитного калькулятора та інформації про умови кредитування перейдіть за
+                    посиланням.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="faq">
             <h2 class="section-title">Часті питання</h2>
             <div class="accordion-holder">
               <div class="accordion">

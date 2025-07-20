@@ -4,6 +4,7 @@
 @use './layout/typography' as *;
 
 .header {
+	display: none;
 	padding: 8px 0;
 	position: fixed;
 	width: 100%;
@@ -69,6 +70,7 @@
 		width: 60%;
 		overflow: unset;
 	}
+
 	.header-active & {
 		opacity: 1;
 		visibility: visible;
@@ -92,11 +94,10 @@
 		display: inline-block;
 	}
 
-	.menu-item {
-	}
+	.menu-item {}
 
 	.menu-item-has-children {
-		> a {
+		>a {
 			&:after {
 				content: '\e906';
 				font-family: 'icomoon';
@@ -202,8 +203,6 @@ body {
 	&:before {
 		content: '';
 	}
-	
-	&.header-active {
 
-	}
+	&.header-active {}
 }

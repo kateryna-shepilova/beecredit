@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
-	initBurger();
+document.addEventListener("DOMContentLoaded", function () {
+	initBurger()
 
-	const body = document.querySelector('body');
-	function initBurger(){
-		const menuToggle = document.querySelector('.menu-toggle');
-		const menuClose = document.querySelector('.menu-close');
+	const body = document.querySelector("body")
+	function initBurger() {
+		const menuToggle = document.querySelector(".menu-toggle")
+		const menuClose = document.querySelector(".menu-close")
 
-		menuToggle.addEventListener('click', function () {
-			body.classList.add('header-active');
-		});
+		menuToggle.addEventListener("click", function () {
+			body.classList.add("header-active")
+		})
 
-		menuClose.addEventListener('click', function () {
-			body.classList.remove('header-active');
-		});
+		menuClose.addEventListener("click", function () {
+			body.classList.remove("header-active")
+		})
 	}
-});
+})
