@@ -4,20 +4,35 @@
 @use './layout/typography' as *;
 
 .footer {
+	font-size: 14px;
 	padding: 96px 0 16px;
+
+	.container {
+		@media (min-width: $pc) {
+			max-width: 1644px;
+			padding-inline: 52px;
+		}
+	}
 
 	&__top {
 		padding-bottom: 24px;
 		margin-bottom: 24px;
 		border-bottom: 1px solid var(--color-neutral-200);
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
 	}
 
-	&__text {
+	&__bottom {
 		font-size: 12px;
-		
-		&--lg {
-			font-size: 14px;
-		}
+		font-weight: 300;
+	}
+
+	&__contacts {
+		text-align: right;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
 	}
 }
 
@@ -33,4 +48,78 @@
 		width: 100%;
 		height: auto;
 	}
+}
+
+.footer-menu-holder {
+	&:not(:last-child) {
+		margin-bottom: 48px;
+	}
+
+	.title {
+		color: var(--color-gray-900);
+		font-weight: 600;
+		padding-bottom: 12px;
+		margin-bottom: 12px;
+		border-bottom: 1px solid var(--color-neutral-200);
+	}
+}
+
+.footer-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	a {
+		color: var(--color-gray-600);
+		text-decoration: none;
+		display: inline-block;
+		padding: 6px 12px;
+	}
+}
+
+.phone {
+	color: var(--color-gray-900);
+	font-weight: 700;
+	font-size: 21px;
+	text-decoration: none;
+	margin-bottom: 8px;
+}
+
+.email {
+	color: var(--color-gray-600);
+	text-decoration: none;
+	margin-bottom: 24px;
+}
+
+.social-media {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 24px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 12px;
+
+	a {
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.callback-button {
+	width: fit-content;
+
+	.icon-call {
+		font-size: 24px;
+	}
+}
+
+.copyright {
+	margin-top: 16px;
 }
