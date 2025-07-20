@@ -54,6 +54,7 @@
 		right: 0;
 		background: rgba($black, 0.7);
 		opacity: 0;
+		visibility: hidden;
 		z-index: -1;
 		transition: all 0.3s ease-in-out;
 	}
@@ -61,6 +62,7 @@
 	.header-active & {
 		&:after {
 			opacity: 1;
+			visibility: visible;
 			z-index: 1;
 		}
 	}
