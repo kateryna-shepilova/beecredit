@@ -1,8 +1,30 @@
-@use "./layout/variables" as *;
-@use "./layout/colors" as *;
-@use "./layout/mixins" as *;
-@use "./layout/typography" as *;
+@use './layout/variables' as *;
+@use './layout/colors' as *;
+@use './layout/mixins' as *;
+@use './layout/typography' as *;
 
 .footer {
+	padding: 96px 0 16px;
 
+	&__text {
+		font-size: 12px;
+		
+		&--lg {
+			font-size: 14px;
+		}
+	}
+}
+
+.footer-logo {
+	max-width: 271px;
+	width: 100%;
+	display: inline-block;
+	font-size: 0;
+	margin-bottom: 16px;
+
+	img {
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+	}
 }
