@@ -1,6 +1,24 @@
+@use "../layout/variables" as *;
+@use "../layout/colors" as *;
+@use "../layout/mixins" as *;
+@use "../layout/typography" as *;
+
 .hero {
 
-	&__title {}
+	&__title {
+		text-align: center;
+		margin: 0;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+
+			@media (min-width:$pc) {
+				margin-bottom: 24px;
+			}
+		}
+
+	}
+
 }
 
 
@@ -100,4 +118,8 @@
 	&__submit-icon {
 		font-size: 16px;
 	}
+}
+
+.header {
+	display: none;
 }
