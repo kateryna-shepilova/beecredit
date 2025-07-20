@@ -16,13 +16,14 @@ button.btn, .menu-toggle {
 	font-size: 14px;
   text-align: center;
   text-decoration: none;
+	transition: all 0.3s ease-in-out;
 
   &:hover {
-    background: $hover;
+    background: var(--color-amber-700);
   }
 
   &:active,
   &:focus {
-    background: $brown;
+    background: var(--color-amber-800);
   }
 }

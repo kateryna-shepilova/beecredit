@@ -7,6 +7,7 @@
 	padding: 8px 0;
 	position: fixed;
 	width: 100%;
+	z-index: 10;
 
 	.container {
 		@media (min-width: $pc) {
@@ -97,9 +98,7 @@
 		background: transparent;
 		flex-direction: row;
 		align-items: center;
-		justify-content: unset;
 		max-width: unset;
-		width: unset;
 		overflow: unset;
 	}
 
@@ -134,6 +133,16 @@
 		text-decoration: none;
 		padding: 6px 12px;
 		display: inline-block;
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			color: var(--color-gray-800);
+		}
+
+		&:active,
+		&:focus {
+			color: var(--color-amber-700);
+		}
 	}
 
 	.menu-item {
@@ -145,15 +154,18 @@
 	}
 
 	.menu-item-has-children {
-		&.active {
-			>a {
-				&:after {
-					color: var(--color-amber-700);
+		position: relative;
+
+		&:hover {
+			@media (min-width: $pc) {
+				> .drop-holder {
+					opacity: 1;
+					visibility: visible;
 				}
 			}
 		}
 
-		>a {
+		> a {
 			&:after {
 				content: '\e906';
 				font-family: 'icomoon';
@@ -170,7 +182,20 @@
 			margin: 0;
 			max-height: 0;
 			overflow: hidden;
-			transition: max-height 0.3s ease;
+			transition: all 0.3s ease-in-out;
+
+			@media (min-width: $pc) {
+				max-height: unset;
+				position: absolute;
+				top: calc(100% + 12px);
+				left: 0;
+				min-width: fit-content;
+				background: $white;
+				padding: 20px;
+				border-radius: 10px;
+				opacity: 0;
+				visibility: hidden;
+			}
 		}
 	}
 }
@@ -182,6 +207,20 @@
 
 	@media (min-width: $pc) {
 		max-width: 207px;
+	}
+
+	&--mobile {
+		@media (min-width: $pc) {
+			display: none;
+		}
+	}
+
+	&--desktop {
+		display: none;
+
+		@media (min-width: $pc) {
+			display: block;
+		}
 	}
 
 	img {
@@ -240,6 +279,22 @@
 		padding: 6px 10px;
 		border-radius: 99px;
 		border: 2px solid var(--color-gray-200);
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			color: var(--color-amber-700);
+		}
+
+		&:active,
+		&:focus {
+			color: var(--color-amber-800);
+		}
+	}
+
+	li.active {
+		a {
+			color: var(--color-amber-800);
+		}
 	}
 }
 
@@ -260,11 +315,22 @@
 }
 
 .header-button {
+	cursor: pointer;
 	padding: 6px 12px;
 	border-radius: 99px;
 	font-size: 20px;
 	width: 44px;
 	height: 32px;
 	background: var(--color-gray-900);
-	color: $white;
+	color: var(--color-gray-50);
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: var(--color-gray-800);
+	}
+
+	&:active,
+	&:focus {
+		background: var(--color-gray-700);
+	}
 }
