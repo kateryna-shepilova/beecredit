@@ -128,7 +128,6 @@
 }
 
 .menu-toggle {
-	
 	@media (min-width: $pc) {
 		display: none;
 	}
@@ -197,4 +196,14 @@
 	height: 32px;
 	background: var(--color-gray-900);
 	color: $white;
+}
+
+body {
+	&:before {
+		content: '';
+	}
+	
+	&.header-active {
+
+	}
 }
