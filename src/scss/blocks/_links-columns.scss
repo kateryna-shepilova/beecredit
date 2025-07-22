@@ -14,8 +14,9 @@
 
 	&__title {
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 		font-size: 29px;
+		gap: 12px;
 
 		@media (min-width: $pc) {
 			font-size: 40px;
@@ -23,10 +24,19 @@
 
 		img {
 			display: block;
-			width: 80px;
-			height: 80px;
+			width: 124px;
+			height: 178px;
 			object-fit: contain;
-			transform: translateY(40%);
 		}
+	}
+}
+
+.links-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+	.link {
+		text-decoration: none;
 	}
 }
