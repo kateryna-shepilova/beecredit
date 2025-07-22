@@ -239,7 +239,9 @@
 
 	&__term {}
 
-	&__submit {}
+	&__submit {
+		max-width: 228px;
+	}
 
 	&__submit-icon {
 		font-size: 16px;
