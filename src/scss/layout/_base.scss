@@ -32,7 +32,6 @@ body {
 	margin: 0 auto;
 
 	@media (min-width: $pc) {
-		max-width: 1176px;
 		width: 100%;
 		max-width: $containerWidth + px;
 	}
