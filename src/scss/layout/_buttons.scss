@@ -20,6 +20,10 @@ button.btn,
 	text-decoration: none;
 	transition: all 0.3s ease-in-out;
 
+	@media (min-width: $pc) {
+		font-size: 16px;
+	}
+
 	&:hover {
 		background: var(--color-amber-700);
 	}
