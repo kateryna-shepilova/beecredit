@@ -3,6 +3,7 @@
 
 a.btn,
 button.btn, .menu-toggle {
+	cursor: pointer;
   background: var(--color-amber-600);
 	color: $white;
 	border: none;
