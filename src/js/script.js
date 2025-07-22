@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 	initBurger()
 	initMenuOpenClose()
+	initAccordion()
 
 	const body = document.querySelector("body")
 	function initBurger() {
@@ -56,5 +57,37 @@ document.addEventListener("DOMContentLoaded", function () {
 				item.classList.remove("open")
 			})
 		}
+	}
+
+	function initAccordion() {
+  const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(accordion => {
+      const items = accordion.querySelectorAll(".accordion-item");
+
+      items.forEach(item => {
+        const opener = item.querySelector(".accordion-item__opener");
+        const slide = item.querySelector(".accordion-item__slide");
+
+        // Ensure the slide is collapsed initially
+        slide.style.maxHeight = null;
+
+        opener.addEventListener("click", () => {
+          const isOpen = item.classList.contains("active");
+
+          // Close all items within this accordion
+          items.forEach(i => {
+            i.classList.remove("active");
+            i.querySelector(".accordion-item__slide").style.maxHeight = null;
+          });
+
+          // Toggle current item
+          if (!isOpen) {
+            item.classList.add("active");
+            slide.style.maxHeight = slide.scrollHeight + "px";
+          }
+        });
+      });
+    });
 	}
 })

@@ -1,10 +1,11 @@
-@use "./variables" as *;
-@use "./colors" as *;
+@use './variables' as *;
+@use './colors' as *;
 
 a.btn,
-button.btn, .menu-toggle {
+button.btn,
+.menu-toggle {
 	cursor: pointer;
-  background: var(--color-amber-600);
+	background: var(--color-amber-600);
 	color: $white;
 	border: none;
 	display: flex;
@@ -15,16 +16,21 @@ button.btn, .menu-toggle {
 	border-radius: 99px;
 	font-weight: 600;
 	font-size: 14px;
-  text-align: center;
-  text-decoration: none;
+	text-align: center;
+	text-decoration: none;
 	transition: all 0.3s ease-in-out;
 
-  &:hover {
-    background: var(--color-amber-700);
-  }
+	&:hover {
+		background: var(--color-amber-700);
+	}
 
-  &:active,
-  &:focus {
-    background: var(--color-amber-800);
-  }
+	&:active,
+	&:focus {
+		background: var(--color-amber-800);
+	}
+
+	span[class*=' icon-'],
+	[class^='icon-'] {
+		font-size: 24px;
+	}
 }
