@@ -168,12 +168,22 @@
 			margin-bottom: 24px;
 		}
 	}
+
+	.icon-question {
+		font-size: 14px;
+		text-decoration: dashed;
+		color: var(--color-system-blue-100);
+	}
 }
 
 .credit-form {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
+
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
 
 	&__field {
 		display: flex;
@@ -267,7 +277,11 @@
 	}
 
 	&__submit {
-		max-width: 228px;
+		width: fit-content;
+
+		&.btn {
+			font-size: 16px;
+		}
 	}
 
 	&__submit-icon {
