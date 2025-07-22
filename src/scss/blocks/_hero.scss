@@ -138,7 +138,11 @@
 	background: url('../images/down_bg.png') no-repeat, bottom, #FFCA28;
 	background-size: 100% 100%;
 	padding: 8px;
-	margin-left: auto;
+
+
+	@media (min-width: 657px) {
+		margin-left: 249px;
+	}
 
 	&__content {
 		position: relative;
@@ -222,7 +226,7 @@
 	}
 
 	&__amount {
-		max-width: 132px;
+		max-width: 122px;
 		background: #fff;
 		border: 1px solid var(--color-gray-200, #EEE);
 		padding: 8px;
@@ -231,29 +235,11 @@
 		line-height: 1.2;
 		color: var(--color-gray-500);
 		pointer-events: none;
-
 	}
 
-	/* 19.2px */
-	&__term {
-		font-weight: bold;
-		font-size: 18px;
-		color: #000;
-	}
+	&__term {}
 
-	&__submit {
-		background: linear-gradient(to right, #ffcc00, #ffaa00);
-		color: #fff;
-		padding: 12px 24px;
-		border: none;
-		border-radius: 999px;
-		font-size: 16px;
-		cursor: pointer;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: 8px;
-	}
+	&__submit {}
 
 	&__submit-icon {
 		font-size: 16px;
