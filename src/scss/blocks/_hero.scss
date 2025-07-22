@@ -64,12 +64,18 @@
 	&__image-holder {
 		width: 100%;
 		max-width: 337px;
-		height: auto;
+		height: 400px;
 
 		@media (min-width: 657px) {
 			position: absolute;
 			bottom: 0;
 			left: 0;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			object-fit: cover;
 		}
 	}
 }
@@ -167,34 +173,50 @@
 .credit-form {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 24px;
 
 	&__field {
 		display: flex;
 		flex-direction: column;
+
+		&:first-child {
+			.credit-form__label {
+				&:not(:last-child) {
+					margin-bottom: 16px;
+				}
+			}
+		}
+
+		&--row {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
 	}
 
 	&__label {
-		font-size: 16px;
-		margin-bottom: 8px;
+		font-size: 21px;
+		font-weight: 500;
+		line-height: 1.2;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 	}
 
 	&__range-wrapper {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
+		gap: 4px;
 	}
 
 	&__range {
 		-webkit-appearance: none;
 		width: 100%;
-		height: 6px;
-		background: linear-gradient(to right, orange 50%, #eee 50%);
-		border-radius: 3px;
+		height: 8px;
+		background: var(--color-amber-900);
+		border-radius: 20px;
 		outline: none;
 		transition: background 0.3s;
 
@@ -202,8 +224,8 @@
 			-webkit-appearance: none;
 			height: 18px;
 			width: 18px;
-			background: #fff;
-			border: 3px solid orange;
+			background: var(--color-neutral-0);
+			border: 2px solid var(--color-amber-900);
 			border-radius: 50%;
 			cursor: pointer;
 		}
@@ -211,8 +233,8 @@
 		&::-moz-range-thumb {
 			height: 18px;
 			width: 18px;
-			background: #fff;
-			border: 3px solid orange;
+			background: var(--color-neutral-0);
+			border: 2px solid var(--color-amber-900);
 			border-radius: 50%;
 			cursor: pointer;
 		}
@@ -222,12 +244,11 @@
 		display: flex;
 		justify-content: space-between;
 		font-size: 14px;
-		color: #000;
 	}
 
 	&__amount {
 		max-width: 122px;
-		background: #fff;
+		background: var(--color-neutral-0);
 		border: 1px solid var(--color-gray-200, #EEE);
 		padding: 8px;
 		border-radius: 4px;
@@ -237,7 +258,13 @@
 		pointer-events: none;
 	}
 
-	&__term {}
+	&__term {
+		font-size: 21px;
+
+		strong {
+			font-weight: 500;
+		}
+	}
 
 	&__submit {
 		max-width: 228px;

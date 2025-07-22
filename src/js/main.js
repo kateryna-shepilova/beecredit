@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			const percent = ((val - min) * 100) / (max - min)
 
-			el.style.background = `linear-gradient(to right, orange ${percent}%, #eee ${percent}%)`
+			el.style.background = `linear-gradient(to right, #ff6f00 ${percent}%, #F5F5F5 ${percent}%)`
 		}
 
 		updateRangeBackground(range)
