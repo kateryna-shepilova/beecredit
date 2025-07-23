@@ -1,5 +1,5 @@
-@use "./variables" as *;
-@use "./colors" as *;
+@use './variables' as *;
+@use './colors' as *;
 
 * {
 	padding: 0px;
@@ -48,6 +48,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
+	@media (min-width: $pc) {
+		font-size: 16px;
+	}
+
 	&.header-active {
 		overflow: hidden;
 	}
@@ -66,11 +70,11 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	>main {
+	> main {
 		flex: 1 1 auto;
 	}
 
-	>* {
+	> * {
 		min-width: 0;
 	}
 }

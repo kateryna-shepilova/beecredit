@@ -24,7 +24,8 @@
 		@media (min-width:$pc) {
 			flex-direction: row;
 			column-gap: 64px;
-			max-width: 1540px;
+			max-width: 1572px;
+			padding: 0 16px;
 			margin-inline: auto;
 		}
 	}
@@ -46,7 +47,7 @@
 
 	&__subtitle {
 		text-align: center;
-		font-size: 29px;
+		font-size: 21px;
 		font-weight: 500;
 
 		&:not(:last-child) {
@@ -67,12 +68,16 @@
 			align-items: center;
 
 			&:not(:last-child) {
-				margin-bottom: 12px;
+				margin-bottom: 20px;
 			}
 		}
 
 		&__title {
-			font-size: 21px;
+			font-size: 16px;
+
+			@media (min-width:$pc) {
+				font-size: 21px;
+			}
 		}
 
 		&__content {
