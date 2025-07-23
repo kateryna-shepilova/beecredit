@@ -1,5 +1,6 @@
 @forward "./includes/normalize";
 @forward "./includes/simplebar";
+@forward "./includes/swiper";
 
 @forward "./layout/colors";
 @forward "./layout/variables";
@@ -16,5 +17,6 @@
 @forward 'blocks/instructions';
 @forward 'blocks/faq';
 @forward 'blocks/links-columns';
+@forward 'blocks/articles';
 @forward 'blocks/info';
 @forward 'blocks/footer';

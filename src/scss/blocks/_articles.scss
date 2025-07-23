@@ -1,0 +1,147 @@
+@use './layout/variables' as *;
+@use './layout/colors' as *;
+@use './layout/mixins' as *;
+@use './layout/typography' as *;
+
+.articles {
+	padding-top: 64px;
+
+	@media (min-width: $pc) {
+		padding-bottom: 64px;
+	}
+
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 24px 16px;
+		margin-bottom: 24px;
+
+		@media (min-width: $pc) {
+			margin-bottom: 48px;
+		}
+	}
+
+	&__title {
+		font-size: 29px;
+		width: 100%;
+
+		@media (min-width: $pc) {
+			width: fit-content;
+			margin-right: auto;
+			font-size: 40px;
+		}
+	}
+
+	.swiper-navigation {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		position: static;
+		width: 48px;
+		height: 48px;
+		padding: 12px;
+		color: var(--color-gray-600);
+		margin-top: 0;
+
+		&:after {
+			font-size: 24px;
+			font-weight: 700;
+		}
+	}
+
+	.btn {
+		min-width: 184px;
+	}
+}
+
+.articles-slider {
+	margin-right: -16px;
+
+	@media (min-width: 832px) {
+		margin-right: calc(400px - 50vw);
+	}
+}
+
+.articles-slide {
+	width: 288px;
+	height: auto;
+
+	@media (min-width: $pc) {
+		width: 576px;
+	}
+
+	&__holder {
+		height: 100%;
+		text-decoration: none;
+		color: var(--color-gray-600);
+		display: flex;
+		flex-direction: column;
+		padding: 16px;
+		gap: 16px;
+		font-size: 14px;
+
+		@media (min-width: $pc) {
+			flex-direction: row;
+		}
+	}
+
+	&__image {
+		border-radius: 24px;
+		overflow: hidden;
+		font-size: 0;
+		width: 264px;
+		height: 276px;
+		flex-shrink: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title {
+		color: var(--color-gray-900);
+		font-size: 22px;
+		font-weight: 600;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	&__text-col {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		flex: 1;
+	}
+
+	p {
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	&__link {
+		color: var(--color-system-blue-100);
+		padding: 6px 0px;
+		border-bottom: 1px dashed var(--color-system-blue-100);
+		display: inline-flex;
+		gap: 5px;
+		width: fit-content;
+		margin-top: auto;
+
+		.icon-chevron-right {
+			font-size: 16px;
+		}
+	}
+}
